@@ -23,10 +23,6 @@ namespace QLCHCayCanh
             //taiKhoanDangNhap = taiKhoan;
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -51,10 +47,10 @@ namespace QLCHCayCanh
         private void mnuThoat_Click(object sender, EventArgs e)
         {
             Functions.Disconnect(); //Đóng kết nối
-            this.Close();
-            /*Application.Exit(); *///Thoát
+            this.Hide();
             frmLogin loginForm = new frmLogin();
             loginForm.Show();
+
         }
 
         private void mnuTaiKhoan_Click(object sender, EventArgs e)
@@ -93,12 +89,6 @@ namespace QLCHCayCanh
             frmcay.Show();
         }
 
-        private void mnuHDBan_Click(object sender, EventArgs e)
-        {
-            frmHoaDon frmHD = new frmHoaDon(); //Khởi tạo đối tượng
-            frmHD.MdiParent = this;
-            frmHD.Show();
-        }
 
         private void mnuThongKe_Click(object sender, EventArgs e)
         {
@@ -107,5 +97,22 @@ namespace QLCHCayCanh
             frmTKe.Show();
         }
 
+        private void mnuHoaDon_Click(object sender, EventArgs e)
+        {
+            frmHoaDon frmHD = new frmHoaDon(); //Khởi tạo đối tượng
+            frmHD.MdiParent = this;
+            frmHD.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+                
+        }
     }
 }

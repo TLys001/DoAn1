@@ -22,7 +22,7 @@ namespace QLCHCayCanh
             cboGTinh.Items.Add("Nữ");
 
             // Đặt mục được chọn mặc định
-            cboGTinh.SelectedIndex = 0;
+            cboGTinh.SelectedValue = "";
         }
         private void LoadDataGridView()
         {
@@ -56,7 +56,7 @@ namespace QLCHCayCanh
         {
             txtMaKH.Text = "";
             txtTenKH.Text = "";
-            cboGTinh.SelectedIndex = 0;
+            cboGTinh.SelectedValue = "";
             mtbSdt.Text = "";
             txtDchi.Text = "";
         }
@@ -139,7 +139,7 @@ namespace QLCHCayCanh
             btnHuy.Enabled = true;
             btnLuu.Enabled = false;
             txtMaKH.Enabled = false;
-            cboGTinh.SelectedIndex = 0;
+            cboGTinh.SelectedValue = "";
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -298,6 +298,42 @@ namespace QLCHCayCanh
             btnHuy.Enabled = true;
             btnTim.Enabled = false;
             txtMaKH.Enabled = false;
+        }
+
+        private void txtMaKH_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtTenKH_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void cboGTinh_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void mtbSdt_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtDchi_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnLuu_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
         }
     }
 }

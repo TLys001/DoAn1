@@ -38,8 +38,8 @@ namespace QLCHCayCanh
             dgvDSLoai.Columns[2].HeaderText = "Ghi chú";
             
             dgvDSLoai.Columns[0].Width = 100;
-            dgvDSLoai.Columns[1].Width = 150;
-            dgvDSLoai.Columns[2].Width = 190;
+            dgvDSLoai.Columns[1].Width = 130;
+            dgvDSLoai.Columns[2].Width = 130;
             
             dgvDSLoai.AllowUserToAddRows = false; //Không cho người dùng thêm dữ liệu trực tiếp
             dgvDSLoai.EditMode = DataGridViewEditMode.EditProgrammatically; //Không cho sửa dữ liệu trực tiếp
@@ -261,6 +261,42 @@ namespace QLCHCayCanh
             ResetValue(); //Xoá trắng các textbox
             cboMaLoai.Enabled = true; //cho phép nhập mới
             cboMaLoai.Focus();
+        }
+
+        private void btnThem_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnHuy_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnSua_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnXoa_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnDong_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnTim_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
         }
     }
 }

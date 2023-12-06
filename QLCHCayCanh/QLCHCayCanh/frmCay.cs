@@ -404,5 +404,100 @@ namespace QLCHCayCanh
         {
 
         }
+
+        private void txtSoLuong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaCay_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtTenCay_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void cboTenLoai_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void cboTenNCC_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtGhiChu_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void dtNgNhap_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtSoLuong_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtGiaNhap_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtGiaBan_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnLuu_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnThem_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnHuy_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnSua_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnXoa_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnDong_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
     }
 }

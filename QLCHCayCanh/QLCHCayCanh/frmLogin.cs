@@ -7,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.Data.SqlClient; //Sử dụng thư viện để làm việc SQL server
 using QLCHCayCanh.Class;
-
 
 namespace QLCHCayCanh
 {
     public partial class frmLogin : Form
     {
        
-
+        
         public frmLogin()
         {
             InitializeComponent();
@@ -24,7 +23,6 @@ namespace QLCHCayCanh
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -100,6 +98,18 @@ namespace QLCHCayCanh
             }
 
         }
-           
+
+        private void txtTaiKhoan_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtMatKhau_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
     }
 }

@@ -261,6 +261,19 @@
     </Content>
     <None Include="Resources\đăng nhập.png" />
     <None Include="Resources\bèo.jpg" />
+    <None Include="Resources\smart-home.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\report-analytics.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\đăng xuất.png" />
+    <None Include="Resources\exit.ico" />
+    <None Include="Resources\bill.png" />
+    <None Include="Resources\tree.jpg" />
+    <None Include="Resources\ncc.jpg" />
+    <None Include="Resources\kh.jpg" />
+    <None Include="Resources\nv.jpg" />
+    <None Include="Resources\man.png" />
+    <None Include="Resources\phanloai.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

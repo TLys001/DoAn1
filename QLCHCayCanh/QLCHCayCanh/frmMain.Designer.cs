@@ -42,7 +42,6 @@ namespace QLCHCayCanh
             this.mnuKH = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNCC = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHoaDon = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuHDBan = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThongKe = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -82,12 +81,14 @@ namespace QLCHCayCanh
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuThoat,
             this.mnuTaiKhoan});
+            this.mnuFile.Image = global::QLCHCayCanh.Properties.Resources.smart_home;
             this.mnuFile.Name = "mnuFile";
-            this.mnuFile.Size = new System.Drawing.Size(61, 20);
+            this.mnuFile.Size = new System.Drawing.Size(77, 20);
             this.mnuFile.Text = "&Tác vụ";
             // 
             // mnuThoat
             // 
+            this.mnuThoat.Image = global::QLCHCayCanh.Properties.Resources.exit;
             this.mnuThoat.Name = "mnuThoat";
             this.mnuThoat.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.mnuThoat.Size = new System.Drawing.Size(180, 22);
@@ -96,6 +97,7 @@ namespace QLCHCayCanh
             // 
             // mnuTaiKhoan
             // 
+            this.mnuTaiKhoan.Image = global::QLCHCayCanh.Properties.Resources.user;
             this.mnuTaiKhoan.Name = "mnuTaiKhoan";
             this.mnuTaiKhoan.Size = new System.Drawing.Size(180, 22);
             this.mnuTaiKhoan.Text = "&Tài khoản";
@@ -111,12 +113,14 @@ namespace QLCHCayCanh
             this.mnuKH,
             this.mnuNCC});
             this.mnuDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuDanhMuc.Image = global::QLCHCayCanh.Properties.Resources.list;
             this.mnuDanhMuc.Name = "mnuDanhMuc";
-            this.mnuDanhMuc.Size = new System.Drawing.Size(80, 20);
+            this.mnuDanhMuc.Size = new System.Drawing.Size(96, 20);
             this.mnuDanhMuc.Text = "&Danh mục";
             // 
             // mnuLoaiCay
             // 
+            this.mnuLoaiCay.Image = global::QLCHCayCanh.Properties.Resources.phanloai;
             this.mnuLoaiCay.Name = "mnuLoaiCay";
             this.mnuLoaiCay.Size = new System.Drawing.Size(159, 22);
             this.mnuLoaiCay.Text = "&Loại cây";
@@ -124,6 +128,7 @@ namespace QLCHCayCanh
             // 
             // mnuCay
             // 
+            this.mnuCay.Image = global::QLCHCayCanh.Properties.Resources.tree;
             this.mnuCay.Name = "mnuCay";
             this.mnuCay.Size = new System.Drawing.Size(159, 22);
             this.mnuCay.Text = "&Cây";
@@ -136,6 +141,7 @@ namespace QLCHCayCanh
             // 
             // mnuNV
             // 
+            this.mnuNV.Image = global::QLCHCayCanh.Properties.Resources.man;
             this.mnuNV.Name = "mnuNV";
             this.mnuNV.Size = new System.Drawing.Size(159, 22);
             this.mnuNV.Text = "&Nhân viên";
@@ -143,6 +149,7 @@ namespace QLCHCayCanh
             // 
             // mnuKH
             // 
+            this.mnuKH.Image = global::QLCHCayCanh.Properties.Resources.kh;
             this.mnuKH.Name = "mnuKH";
             this.mnuKH.Size = new System.Drawing.Size(159, 22);
             this.mnuKH.Text = "&Khách hàng";
@@ -150,6 +157,7 @@ namespace QLCHCayCanh
             // 
             // mnuNCC
             // 
+            this.mnuNCC.Image = global::QLCHCayCanh.Properties.Resources.ncc;
             this.mnuNCC.Name = "mnuNCC";
             this.mnuNCC.Size = new System.Drawing.Size(159, 22);
             this.mnuNCC.Text = "Nhà c&ung cấp";
@@ -157,23 +165,17 @@ namespace QLCHCayCanh
             // 
             // mnuHoaDon
             // 
-            this.mnuHoaDon.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuHDBan});
+            this.mnuHoaDon.Image = global::QLCHCayCanh.Properties.Resources.bill;
             this.mnuHoaDon.Name = "mnuHoaDon";
-            this.mnuHoaDon.Size = new System.Drawing.Size(75, 20);
-            this.mnuHoaDon.Text = "&Hóa đơn ";
-            // 
-            // mnuHDBan
-            // 
-            this.mnuHDBan.Name = "mnuHDBan";
-            this.mnuHDBan.Size = new System.Drawing.Size(154, 22);
-            this.mnuHDBan.Text = "&Hóa đơn bán";
-            this.mnuHDBan.Click += new System.EventHandler(this.mnuHDBan_Click);
+            this.mnuHoaDon.Size = new System.Drawing.Size(114, 20);
+            this.mnuHoaDon.Text = "&Hóa đơn bán";
+            this.mnuHoaDon.Click += new System.EventHandler(this.mnuHoaDon_Click);
             // 
             // mnuThongKe
             // 
+            this.mnuThongKe.Image = global::QLCHCayCanh.Properties.Resources.report_analytics;
             this.mnuThongKe.Name = "mnuThongKe";
-            this.mnuThongKe.Size = new System.Drawing.Size(77, 20);
+            this.mnuThongKe.Size = new System.Drawing.Size(93, 20);
             this.mnuThongKe.Text = "Thống &kê";
             this.mnuThongKe.Click += new System.EventHandler(this.mnuThongKe_Click);
             // 
@@ -292,6 +294,8 @@ namespace QLCHCayCanh
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý cửa hàng Spring Graden";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -315,7 +319,6 @@ namespace QLCHCayCanh
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mnuKH;
         private System.Windows.Forms.ToolStripMenuItem mnuHoaDon;
-        private System.Windows.Forms.ToolStripMenuItem mnuHDBan;
         private System.Windows.Forms.ToolStripMenuItem mnuTaiKhoan;
         private System.Windows.Forms.ToolStripMenuItem mnuNCC;
         private System.Windows.Forms.ToolStripMenuItem mnuThongKe;

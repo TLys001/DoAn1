@@ -46,11 +46,11 @@ namespace QLCHCayCanh
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label2.Font = new System.Drawing.Font("VNI-Commerce", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("VNI-Commerce", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(213, 21);
+            this.label2.Location = new System.Drawing.Point(184, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 52);
+            this.label2.Size = new System.Drawing.Size(296, 68);
             this.label2.TabIndex = 0;
             this.label2.Text = "Spring Garden";
             // 
@@ -60,7 +60,7 @@ namespace QLCHCayCanh
             this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(196, 104);
+            this.label1.Location = new System.Drawing.Point(235, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 16);
             this.label1.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace QLCHCayCanh
             this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label3.Location = new System.Drawing.Point(196, 134);
+            this.label3.Location = new System.Drawing.Point(235, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 16);
             this.label3.TabIndex = 1;
@@ -84,7 +84,7 @@ namespace QLCHCayCanh
             this.chkHienMatKhau.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.chkHienMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkHienMatKhau.ForeColor = System.Drawing.Color.DarkGreen;
-            this.chkHienMatKhau.Location = new System.Drawing.Point(339, 159);
+            this.chkHienMatKhau.Location = new System.Drawing.Point(238, 177);
             this.chkHienMatKhau.Name = "chkHienMatKhau";
             this.chkHienMatKhau.Size = new System.Drawing.Size(119, 19);
             this.chkHienMatKhau.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace QLCHCayCanh
             this.btnThoat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Red;
-            this.btnThoat.Location = new System.Drawing.Point(342, 200);
+            this.btnThoat.Location = new System.Drawing.Point(339, 212);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(95, 30);
             this.btnThoat.TabIndex = 5;
@@ -109,32 +109,34 @@ namespace QLCHCayCanh
             // 
             this.txtTaiKhoan.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTaiKhoan.ForeColor = System.Drawing.Color.DarkGreen;
-            this.txtTaiKhoan.Location = new System.Drawing.Point(306, 101);
+            this.txtTaiKhoan.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.txtTaiKhoan.Location = new System.Drawing.Point(238, 103);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(153, 22);
-            this.txtTaiKhoan.TabIndex = 6;
+            this.txtTaiKhoan.Size = new System.Drawing.Size(196, 22);
+            this.txtTaiKhoan.TabIndex = 0;
+            this.txtTaiKhoan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTaiKhoan_KeyUp);
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.ForeColor = System.Drawing.Color.DarkGreen;
-            this.txtMatKhau.Location = new System.Drawing.Point(266, 131);
+            this.txtMatKhau.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.txtMatKhau.Location = new System.Drawing.Point(238, 152);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(193, 22);
-            this.txtMatKhau.TabIndex = 6;
+            this.txtMatKhau.Size = new System.Drawing.Size(196, 22);
+            this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyUp);
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.Green;
-            this.btnDangNhap.Location = new System.Drawing.Point(205, 200);
+            this.btnDangNhap.Location = new System.Drawing.Point(238, 212);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(95, 30);
-            this.btnDangNhap.TabIndex = 5;
+            this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);

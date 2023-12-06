@@ -22,7 +22,8 @@ namespace QLCHCayCanh
             cboGTinh.Items.Add("Nữ");
 
             // Đặt mục được chọn mặc định
-            cboGTinh.SelectedIndex = 0;
+            //cboGTinh.SelectedIndex = 0;
+            cboGTinh.SelectedValue = "";
         }
         private void LoadDataGridView()
         {
@@ -47,7 +48,7 @@ namespace QLCHCayCanh
             dgvDSNV.Columns[6].HeaderText = "Ngày nhận";
 
             dgvDSNV.Columns[0].Width = 70;
-            dgvDSNV.Columns[1].Width = 130;
+            dgvDSNV.Columns[1].Width = 100;
             dgvDSNV.Columns[2].Width = 100;
             dgvDSNV.Columns[3].Width = 100;
             dgvDSNV.Columns[4].Width = 50;
@@ -126,18 +127,13 @@ namespace QLCHCayCanh
             txtMaNV.Enabled = true; //cho phép nhập mới
             txtMaNV.Focus();
         }
-
-        private void btnDong_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         private void ResetValue()
         {
             txtMaNV.Text = "";
             txtTenNV.Text = "";
             mtbSdt.Text = "";
             dtNgSinh.Value = DateTime.Today;
-            cboGTinh.SelectedIndex = 0;
+            cboGTinh.SelectedValue = "";
             txtDchi.Text = "";
             dtNgNhan.Value = DateTime.Today;
         }
@@ -220,7 +216,7 @@ namespace QLCHCayCanh
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
             txtMaNV.Enabled = false;
-            cboGTinh.SelectedIndex = 0;
+            cboGTinh.SelectedValue = "";
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -285,7 +281,7 @@ namespace QLCHCayCanh
             btnHuy.Enabled = true;
             btnLuu.Enabled = false;
             txtMaNV.Enabled = false;
-            cboGTinh.SelectedIndex = 0;
+            cboGTinh.SelectedValue = "";
             
         }
 
@@ -345,7 +341,8 @@ namespace QLCHCayCanh
         private void btnTim_Click(object sender, EventArgs e)
         {
             string sql;
-            if ((txtMaNV.Text == "") && (txtTenNV.Text == ""))
+            if ((txtMaNV.Text == "") && (txtTenNV.Text == "")&& (cboGTinh.Text == "") 
+                && (mtbSdt.Text == "")&& (dtNgSinh.Text == "") && (dtNgNhan.Text == "") && (txtDchi.Text == ""))
             {
                 MessageBox.Show("Bạn hãy nhập điều kiện cần tìm ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -355,6 +352,16 @@ namespace QLCHCayCanh
                 sql += " AND MaNV LIKE N'%" + txtMaNV.Text + "%'";
             if (txtTenNV.Text != "")
                 sql += " AND TenNV LIKE N'%" + txtTenNV.Text + "%'";
+            if (cboGTinh.Text != "")
+                sql += " AND GioiTinh LIKE N'%" + cboGTinh.Text + "%'";
+            if (mtbSdt.Text != "")
+                sql += " AND Sdt LIKE N'%" + mtbSdt.Text + "%'";
+            if (dtNgSinh.Text != "")
+                sql += " AND NgaySinh LIKE N'%" + dtNgSinh.Text + "%'";
+            if (dtNgNhan.Text != "")
+                sql += " AND NgayNhan LIKE N'%" + dtNgNhan.Text + "%'";
+            if (txtDchi.Text != "")
+                sql += " AND DChi LIKE N'%" + txtDchi.Text + "%'";
             tbNhanVien = Functions.GetDataToTable(sql);
             if (tbNhanVien.Rows.Count == 0)
                 MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -15,9 +15,9 @@ namespace QLCHCayCanh
     public partial class frmNhaCungCap : Form
     {
         DataTable tbNCC;
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;
-                                    AttachDbFilename=D:\HK5\DoAn1\QLCHCayCanh\QLCHCayCanh\QLCHCAY.mdf;
-                                    Integrated Security=True;Connect Timeout=30";
+        //private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;
+        //                            AttachDbFilename=D:\HK5\DoAn1\QLCHCayCanh\QLCHCayCanh\QLCHCAY.mdf;
+        //                            Integrated Security=True;Connect Timeout=30";
         public frmNhaCungCap()
         {
             InitializeComponent();
@@ -47,7 +47,7 @@ namespace QLCHCayCanh
             dgvDSNCC.Columns[2].Width = 100;
             dgvDSNCC.Columns[3].Width = 200;
             dgvDSNCC.Columns[4].Width = 150;
-            dgvDSNCC.Columns[5].Width = 200;
+            dgvDSNCC.Columns[5].Width = 120;
 
             dgvDSNCC.AllowUserToAddRows = false; //Không cho người dùng thêm dữ liệu trực tiếp
             dgvDSNCC.EditMode = DataGridViewEditMode.EditProgrammatically; //Không cho sửa dữ liệu trực tiếp
@@ -298,6 +298,48 @@ namespace QLCHCayCanh
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboMaNCC_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void cboTenNCC_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void mtbSdt_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtDchi_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtEmail_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void txtGhiChu_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
+        }
+
+        private void btnLuu_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
         }
     }
 }

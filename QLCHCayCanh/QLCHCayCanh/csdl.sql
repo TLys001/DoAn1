@@ -78,7 +78,7 @@ create table tbNhanVien
 insert into tbNhanVien(MaNV, TenNV, Sdt, NgaySinh, GioiTinh, DChi, NgayNhan)
 values ('NV01',N'Thiên Lý','0345006308','09/21/2002',N'Nữ',N'Bình Thủy, Cần Thơ','10/20/2023');
 
---drop table tbNhanVien;
+--delete table tbNhanVien;
 
 create table tbKhachHang
 (

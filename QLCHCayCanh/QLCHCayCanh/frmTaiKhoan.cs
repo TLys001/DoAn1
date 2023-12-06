@@ -110,7 +110,7 @@ namespace QLCHCayCanh
             cboVaiTro.DisplayMember = "Value";
             cboVaiTro.ValueMember = "Key";
             
-            cboVaiTro.SelectedValue = 1;  // Đặt vai trò được chọn là "Nhân viên"
+            cboVaiTro.SelectedValue = "";  // Đặt vai trò được chọn là "trống"
 
 
 
@@ -121,7 +121,7 @@ namespace QLCHCayCanh
             // Hiển thị mã nhân viên trong cboMaNV
             string sql = "SELECT DISTINCT MaNV FROM tbNhanVien";
             Functions.FillCombo(sql, cboMaNV, "MaNV", "MaNV");
-
+            cboMaNV.SelectedValue = "";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -138,10 +138,6 @@ namespace QLCHCayCanh
             
         }
 
-        private void btnDong_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
@@ -361,7 +357,7 @@ namespace QLCHCayCanh
             cboVaiTro.ValueMember = "Key";
 
            
-            cboVaiTro.SelectedValue = 1;  // Đặt vai trò được chọn là "Nhân viên"
+            cboVaiTro.SelectedValue = "";  // Đặt vai trò được chọn là "Nhân viên"
             if (dgvDSTK.SelectedCells.Count > 0)
             {
                 int selectedRowIndex = dgvDSTK.SelectedCells[0].RowIndex;
@@ -370,47 +366,6 @@ namespace QLCHCayCanh
                 cboVaiTro.SelectedValue = selectedRow.Cells["Vai trò"].Value;
             }
         }
-
-        //public void DangNhap(string taiKhoan)
-        //{
-        //    using (SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB;
-        //    AttachDbFilename = D:\HK5\DoAn1\QLCHCayCanh\QLCHCayCanh\QLCHCAY.mdf;
-        //    Integrated Security = True; Connect Timeout = 30"))
-        //    {
-        //        conn.Open();
-
-        //        using (SqlCommand cmd = new SqlCommand("SELECT * FROM tbTaiKhoan WHERE username = @username", conn))
-        //        {
-        //            cmd.Parameters.AddWithValue("@username", taiKhoan);
-
-        //            using (SqlDataReader reader = cmd.ExecuteReader())
-        //            {
-        //                if (reader.Read())
-        //                {
-        //                    txtUsername.Text = reader["username"].ToString();
-        //                    txtPassword.Text = reader["password"].ToString();
-        //                    txtTenTK.Text = reader["tentk"].ToString();
-        //                    int vaitro = reader.GetInt32(reader.GetOrdinal("vaitro"));
-        //                    if (vaitro < cboVaiTro.Items.Count)
-        //                    {
-        //                        cboVaiTro.SelectedIndex = vaitro;
-        //                    }
-        //                    else
-        //                    {
-        //                        // Xử lý lỗi hoặc thông báo cho người dùng
-        //                    }
-        //                    cboMaNV.Text = reader["MaNV"].ToString();
-
-        //                    btnTim.Visible = false;
-        //                    btnThem.Visible = false;
-        //                    btnXoa.Visible = false;
-        //                    btnLuu.Visible = false;
-        //                    btnHuy.Visible = false;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
 
     }
 }
